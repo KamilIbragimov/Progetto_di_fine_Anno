@@ -2,7 +2,7 @@ from email_validator import validate_email, EmailNotValidError
 import random
 import string
 import os
-
+import requests
 def password_generata() -> str:
     try:
         length = int(input("Inserisci la lunghezza desiderata per la password: "))
@@ -40,16 +40,18 @@ def verifica_email() -> str:
             return indirizzo_email
         except EmailNotValidError as e:
             
-            print("Inserisci un indirizzo email esistente.")
+            print("Inserisci un indirizzo email valido.")
 
 
 password_generata = password_generata()
 email_inserita = verifica_email()
 
 
+
+
+
 sito_collegato = input("Inserisci il sito collegato alle credenziali:  es google.com: ")
-
-
+ 
 
 
 def crea_dizionario(email_inserita: str, password_generata: str,sito_collegato:str) -> dict:
@@ -67,8 +69,11 @@ def crea_dizionario(email_inserita: str, password_generata: str,sito_collegato:s
 dati_dict = crea_dizionario(email_inserita, password_generata,sito_collegato)
 
 
-os.system('cls')
+os.system('clear')
 
 print("Password email e sito associati:")
+
 for chiave, valore in dati_dict.items():
     print(f"{chiave}-->{valore}")
+
+
