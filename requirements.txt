@@ -1,6 +1,7 @@
 email_validator  
-random
-string
-os
 validate_email
 EmailNotValidError
+requests
+re
+random
+string
