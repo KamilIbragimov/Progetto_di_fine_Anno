@@ -71,9 +71,9 @@ email_inserita = verifica_email()
 
 def verifica_sito() -> str:
     """Verifica se un sito web inserito dall'utente esiste.
-
-    Returns:
-        str: Il sito web esistente o una stringa vuota se non esiste.
+    
+    Args: nessuno.
+    Return::Il sito web esistente.
     """
     while True:
         sito_collegato = input("Inserisci il sito collegato alle credenziali (es. google.com): ")
